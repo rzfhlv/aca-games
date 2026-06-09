@@ -19,5 +19,11 @@ export default defineNuxtConfig({
     },
   },
 
+  nitro: {
+    prerender: {
+      routes: ['/learning/letters'],
+    },
+  },
+
   compatibilityDate: '2025-07-15',
 })
