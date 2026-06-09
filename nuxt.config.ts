@@ -20,6 +20,9 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    output: {
+      publicDir: 'dist',
+    },
     prerender: {
       routes: ['/learning/letters'],
     },
