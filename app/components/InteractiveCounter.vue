@@ -5,7 +5,7 @@
       <button
         v-for="i in count"
         :key="i"
-        class="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full font-bold text-base sm:text-lg transition-all duration-200 cursor-pointer select-none"
+        class="flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full font-bold text-lg transition-all duration-200 cursor-pointer select-none"
         :class="tapped.has(i)
           ? 'tapped-dot bg-yellow-400 text-white shadow-md'
           : 'border-2 border-gray-300 bg-white text-gray-300 hover:border-gray-400'"
@@ -14,7 +14,7 @@
         {{ i }}
       </button>
     </div>
-    <p class="text-center text-xs text-gray-400 mt-3">{{ tapped.size }} dari {{ count }}</p>
+    <p class="text-center text-sm text-gray-400 mt-3">{{ tapped.size }} dari {{ count }}</p>
   </div>
 </template>
 

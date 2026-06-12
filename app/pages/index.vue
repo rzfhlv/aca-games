@@ -11,9 +11,7 @@
         class="relative flex flex-col items-center justify-center aspect-square rounded-3xl shadow-lg text-white text-center p-4 transition-transform hover:scale-105 active:scale-95"
         :class="m.color"
       >
-        <span v-if="progress.isModuleComplete(m.id)" class="absolute top-2 right-2 text-2xl">
-          ⭐
-        </span>
+        <BadgeDisplay :completed="progress.isModuleComplete(m.id)" />
         <span class="text-5xl mb-2">{{ m.icon }}</span>
         <span class="text-xl font-semibold">{{ m.label }}</span>
       </NuxtLink>

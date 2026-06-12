@@ -1,6 +1,6 @@
 <template>
-  <div class="min-h-screen p-6">
-    <NuxtLink to="/" class="inline-flex items-center gap-1 text-green-500 hover:text-green-700 mb-6 text-lg">
+  <div class="min-h-screen p-4 sm:p-6">
+    <NuxtLink to="/" class="inline-flex items-center gap-1 py-2 text-green-500 hover:text-green-700 mb-6 text-lg">
       ← Kembali
     </NuxtLink>
 
@@ -28,7 +28,7 @@
       >
         <div class="relative bg-white rounded-3xl shadow-2xl w-full max-w-sm">
           <button
-            class="absolute top-4 right-4 text-2xl text-gray-400 hover:text-gray-600 z-10"
+            class="absolute top-2 right-2 w-10 h-10 flex items-center justify-center text-2xl text-gray-400 hover:text-gray-600 z-10 rounded-full"
             @click="selected = null"
           >
             ✕
@@ -39,7 +39,7 @@
           <div class="flex justify-between px-6 pb-6">
             <button
               v-if="selected > 0"
-              class="flex items-center gap-1 text-green-500 hover:text-green-700 text-lg font-semibold"
+              class="flex items-center gap-1 py-2 text-green-500 hover:text-green-700 text-lg font-semibold"
               @click="selected--"
             >
               ← {{ filtered[selected - 1].name }}
@@ -48,7 +48,7 @@
 
             <button
               v-if="selected < filtered.length - 1"
-              class="flex items-center gap-1 text-green-500 hover:text-green-700 text-lg font-semibold"
+              class="flex items-center gap-1 py-2 text-green-500 hover:text-green-700 text-lg font-semibold"
               @click="selected++"
             >
               {{ filtered[selected + 1].name }} →
@@ -93,7 +93,8 @@ const filtered = computed(() => animals.filter(a => a.habitat === activeHabitat.
 const selected = ref<number | null>(null)
 const router = useRouter()
 const { markModuleComplete } = useProgressTracker()
-const { play } = useAudioEngine()
+const { play, speak } = useAudioEngine()
+const { show } = useConfetti()
 
 watch(selected, (i) => {
   if (i !== null) {
@@ -102,8 +103,12 @@ watch(selected, (i) => {
 })
 
 function complete() {
-  markModuleComplete('animals')
-  router.push('/')
+  show()
+  speak('Selamat!')
+  setTimeout(() => {
+    markModuleComplete('animals')
+    router.push('/')
+  }, 2000)
 }
 </script>
 
