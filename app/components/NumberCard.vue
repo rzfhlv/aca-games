@@ -5,7 +5,6 @@
       <span class="text-2xl font-semibold text-gray-700">{{ number.word }}</span>
       <AudioButton :text="number.word" size="sm" />
     </div>
-    <InteractiveCounter :count="number.value" />
   </div>
 </template>
 
