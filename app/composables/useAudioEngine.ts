@@ -45,7 +45,7 @@ export function useAudioEngine() {
     })
   }
 
-  function speak(text: string, lang = 'id-ID'): Promise<void> {
+  function speak(text: string, lang = 'en-US'): Promise<void> {
     return new Promise((resolve) => {
       stopAll()
       if (!window.speechSynthesis) {
@@ -67,7 +67,7 @@ export function useAudioEngine() {
     })
   }
 
-  async function play(url?: string, text?: string, lang = 'id-ID') {
+  async function play(url?: string, text?: string, lang = 'en-US') {
     if (url) {
       await playFile(url)
     } else if (text) {

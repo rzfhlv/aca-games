@@ -20,7 +20,7 @@ const props = withDefaults(defineProps<{
   size?: 'sm' | 'md' | 'lg'
 }>(), {
   size: 'md',
-  lang: 'id-ID',
+  lang: 'en-US',
 })
 
 const audio = useAudioEngine()
