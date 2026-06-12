@@ -4,7 +4,7 @@
     :class="[sizeClasses, { 'animate-pulse': audio.isPlaying.value }]"
     :style="{ minWidth: sizePx, minHeight: sizePx }"
     @click="handleClick"
-    :aria-label="`Dengarkan ${text || src || ''}`"
+    :aria-label="`Listen ${text || src || ''}`"
   >
     <span :class="textSizeClass">
       {{ audio.isPlaying.value ? '🔊' : '🔈' }}

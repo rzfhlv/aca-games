@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <p class="text-center text-sm text-gray-400 mb-3">Ketuk untuk menghitung</p>
+    <p class="text-center text-sm text-gray-400 mb-3">Tap to count</p>
     <div class="flex flex-wrap justify-center gap-2">
       <button
         v-for="i in count"
@@ -14,7 +14,7 @@
         {{ i }}
       </button>
     </div>
-    <p class="text-center text-sm text-gray-400 mt-3">{{ tapped.size }} dari {{ count }}</p>
+    <p class="text-center text-sm text-gray-400 mt-3">{{ tapped.size }} of {{ count }}</p>
   </div>
 </template>
 

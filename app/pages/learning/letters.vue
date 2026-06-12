@@ -1,10 +1,10 @@
 <template>
   <div class="min-h-screen p-4 sm:p-6">
     <NuxtLink to="/" class="inline-flex items-center gap-1 py-2 text-purple-500 hover:text-purple-700 mb-6 text-lg">
-      ← Kembali
+      ← Back
     </NuxtLink>
 
-    <h1 class="text-4xl font-bold text-purple-700 text-center mb-8">Belajar Huruf</h1>
+    <h1 class="text-4xl font-bold text-purple-700 text-center mb-8">Learn Letters</h1>
 
     <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-3 max-w-3xl mx-auto">
       <button
@@ -62,7 +62,7 @@
         class="px-8 py-3 bg-green-400 text-white rounded-2xl text-xl font-semibold shadow-lg transition-transform hover:scale-105 active:scale-90"
         @click="complete"
       >
-        Selesai ✅
+        Done ✅
       </button>
     </div>
   </div>
@@ -92,7 +92,7 @@ watch(selected, (i) => {
 
 function complete() {
   show()
-  speak('Selamat!')
+  speak('Well done!')
   setTimeout(() => {
     markModuleComplete('letters')
     router.push('/')

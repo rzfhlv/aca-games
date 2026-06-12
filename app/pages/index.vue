@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-center justify-center min-h-screen p-6">
     <h1 class="text-5xl font-bold text-purple-700 mb-2">Acha Games</h1>
-    <p class="text-xl text-purple-500 mb-12">Belajar sambil bermain</p>
+    <p class="text-xl text-purple-500 mb-12">Learn while playing</p>
 
     <div class="grid grid-cols-2 gap-6 w-full max-w-md">
       <NuxtLink
@@ -23,9 +23,9 @@
 const progress = useProgressTracker()
 
 const modules = [
-  { id: 'letters', path: '/learning/letters', label: 'Huruf', icon: '🔤', color: 'bg-red-400' },
-  { id: 'numbers', path: '/learning/numbers', label: 'Angka', icon: '🔢', color: 'bg-blue-400' },
-  { id: 'animals', path: '/learning/animals', label: 'Hewan', icon: '🐾', color: 'bg-green-400' },
-  { id: 'objects', path: '/learning/objects', label: 'Benda', icon: '🧸', color: 'bg-yellow-400' },
+  { id: 'letters', path: '/learning/letters', label: 'Letters', icon: '🔤', color: 'bg-red-400' },
+  { id: 'numbers', path: '/learning/numbers', label: 'Numbers', icon: '🔢', color: 'bg-blue-400' },
+  { id: 'animals', path: '/learning/animals', label: 'Animals', icon: '🐾', color: 'bg-green-400' },
+  { id: 'objects', path: '/learning/objects', label: 'Objects', icon: '🧸', color: 'bg-yellow-400' },
 ]
 </script>

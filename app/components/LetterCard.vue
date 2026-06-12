@@ -18,7 +18,7 @@
       size="lg"
       class="mt-2"
     />
-    <span class="text-sm text-gray-400 -mt-2">Ketuk untuk mendengar</span>
+    <span class="text-sm text-gray-400 -mt-2">Tap to listen</span>
   </div>
 </template>
 

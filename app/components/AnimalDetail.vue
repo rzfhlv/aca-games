@@ -5,11 +5,11 @@
 
     <div class="flex gap-8 mt-2">
       <div class="flex flex-col items-center gap-2">
-        <span class="text-sm text-gray-400">Suara</span>
+        <span class="text-sm text-gray-400">Sound</span>
         <AudioButton :text="animal.sound" size="md" />
       </div>
       <div class="flex flex-col items-center gap-2">
-        <span class="text-sm text-gray-400">Nama</span>
+        <span class="text-sm text-gray-400">Name</span>
         <AudioButton :text="animal.name" size="md" />
       </div>
     </div>
