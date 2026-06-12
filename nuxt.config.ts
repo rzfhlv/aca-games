@@ -11,6 +11,9 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'id',
+      },
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
@@ -24,7 +27,7 @@ export default defineNuxtConfig({
       publicDir: 'dist',
     },
     prerender: {
-      routes: ['/learning/letters'],
+      routes: ['/learning/letters', '/learning/numbers', '/learning/animals', '/learning/objects'],
     },
   },
 
