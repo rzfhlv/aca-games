@@ -61,7 +61,7 @@
 
 ---
 
-## Milestone 4: Objects Module + Gamification + Deploy ⚠️ (deploy pending)
+## Milestone 4: Objects Module + Gamification + Deploy ✅
 
 ### Objects Module (`/learning/objects`)
 
@@ -81,4 +81,4 @@
 - [x] Responsive audit: ensure 64px touch targets, no CLS, mobile-first layout tested at 320px–768px
 - [x] Final `netlify.toml` verification
 - [x] Verify `npm run generate` builds cleanly to `dist/`
-- [ ] Deploy to Netlify
+- [x] Deploy to Netlify
