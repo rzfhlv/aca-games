@@ -10,7 +10,24 @@
       <CategoryTabs :tabs="categories" :active="activeCategory" @select="activeCategory = $event" />
     </div>
 
-    <div class="grid grid-cols-3 sm:grid-cols-4 gap-3 max-w-lg mx-auto">
+    <div class="flex justify-center gap-2 mb-8">
+      <button
+        class="px-6 py-3 rounded-full text-lg font-semibold transition-all duration-150 active:scale-90"
+        :class="mode === 'cards' ? 'bg-yellow-400 text-white shadow-md scale-105' : 'bg-white/60 text-gray-500 hover:bg-white/80'"
+        @click="mode = 'cards'"
+      >
+        🃏 Cards
+      </button>
+      <button
+        class="px-6 py-3 rounded-full text-lg font-semibold transition-all duration-150 active:scale-90"
+        :class="mode === 'match' ? 'bg-yellow-400 text-white shadow-md scale-105' : 'bg-white/60 text-gray-500 hover:bg-white/80'"
+        @click="mode = 'match'"
+      >
+        🧩 Match
+      </button>
+    </div>
+
+    <div v-if="mode === 'cards'" class="grid grid-cols-3 sm:grid-cols-4 gap-3 max-w-lg mx-auto">
       <ObjectCard
         v-for="(item, i) in filtered"
         :key="item.id"
@@ -18,6 +35,14 @@
         :color="cardColors[i % cardColors.length]"
       />
     </div>
+
+    <MatchingGame
+      v-else
+      :key="activeCategory"
+      :objects="filtered"
+      :colors="cardColors"
+      @complete="complete"
+    />
 
     <div class="flex justify-center mt-8">
       <button
@@ -49,6 +74,7 @@ const cardColors = [
 ]
 
 const activeCategory = ref<ObjectCategory>('fruits')
+const mode = ref<'cards' | 'match'>('cards')
 
 const filtered = computed(() => objects.filter(o => o.category === activeCategory.value))
 

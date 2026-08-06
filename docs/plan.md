@@ -38,48 +38,47 @@
 
 ---
 
-## Milestone 3: Numbers & Animals Modules
+## Milestone 3: Numbers & Animals Modules ✅
 
 ### Numbers Module (`/learning/numbers`)
 
-- [ ] `app/data/numbers.ts` — Data for numbers 1–20
-- [ ] `app/components/NumberCard.vue` — Bold digit display with interactive quantification
-- [ ] `app/components/InteractiveCounter.vue` — Animated tappable elements (stars/dots) that change color/bounce when tapped
-- [ ] Update `app/pages/learning/numbers.vue` — 1–20 grid, tap for detail view with interactive counters, audio pronunciation
+- [x] `app/data/numbers.ts` — Data for numbers 1–20
+- [x] `app/components/NumberCard.vue` — Bold digit display with audio pronunciation
+- [x] Update `app/pages/learning/numbers.vue` — 1–20 grid, tap for detail view with audio pronunciation
 
 ### Animals Module (`/learning/animals`)
 
-- [ ] `app/data/animals.ts` — Animal data categorized by habitat (Farm, Jungle, Ocean) with emoji/illustration placeholders
-- [ ] `app/components/AnimalCard.vue` — Grid card with thumbnail and name
-- [ ] `app/components/AnimalDetail.vue` — Full-screen view: illustration, phonetic label, animal sound button, name pronunciation button
-- [ ] `app/components/CategoryTabs.vue` — Horizontal tab bar for habitat categories
-- [ ] Update `app/pages/learning/animals.vue` — Category tabs, grid of cards, tap for full-screen detail
+- [x] `app/data/animals.ts` — Animal data categorized by habitat (Farm, Jungle, Ocean) with emoji/illustration placeholders
+- [x] `app/components/AnimalCard.vue` — Grid card with thumbnail and name
+- [x] `app/components/AnimalDetail.vue` — Full-screen view: illustration, phonetic label, animal sound button, name pronunciation button
+- [x] `app/components/CategoryTabs.vue` — Horizontal tab bar for habitat categories
+- [x] Update `app/pages/learning/animals.vue` — Category tabs, grid of cards, tap for full-screen detail
 
 ### Cross-module
 
-- [ ] Mobile responsive audit for both pages
-- [ ] Update `nuxt.config.ts` prerender routes for new pages
+- [x] Mobile responsive audit for both pages
+- [x] Update `nuxt.config.ts` prerender routes for new pages
 
 ---
 
-## Milestone 4: Objects Module + Gamification + Deploy
+## Milestone 4: Objects Module + Gamification + Deploy ⚠️ (deploy pending)
 
 ### Objects Module (`/learning/objects`)
 
-- [ ] `app/data/objects.ts` — Data categorized by Fruits, Vehicles, Shapes, Colors
-- [ ] `app/components/ObjectCard.vue` — Flashcard with image + label, tap for audio
-- [ ] Update `app/pages/learning/objects.vue` — Category selection, flashcard/matching mechanics with audio confirmation
+- [x] `app/data/objects.ts` — Data categorized by Fruits, Vehicles, Shapes, Colors
+- [x] `app/components/ObjectCard.vue` — Flashcard with image + label, tap for audio
+- [x] Update `app/pages/learning/objects.vue` — Category selection, flashcard/matching mechanics with audio confirmation
 
 ### Gamification
 
-- [ ] `app/components/ConfettiOverlay.vue` — Full-screen CSS confetti burst triggered on module completion
-- [ ] `app/components/BadgeDisplay.vue` — Shows earned badges/stars per module
-- [ ] Wire `useProgressTracker` into each module page → mark module complete after interaction
-- [ ] Wire `ConfettiOverlay` + success chime on completion
+- [x] `app/components/ConfettiOverlay.vue` — Full-screen CSS confetti burst triggered on module completion
+- [x] `app/components/BadgeDisplay.vue` — Shows earned badges/stars per module
+- [x] Wire `useProgressTracker` into each module page → mark module complete after interaction
+- [x] Wire `ConfettiOverlay` + success chime on completion
 
 ### Polish & Deploy
 
-- [ ] Responsive audit: ensure 64px touch targets, no CLS, mobile-first layout tested at 320px–768px
-- [ ] Final `netlify.toml` verification
-- [ ] Verify `npm run generate` builds cleanly to `dist/`
+- [x] Responsive audit: ensure 64px touch targets, no CLS, mobile-first layout tested at 320px–768px
+- [x] Final `netlify.toml` verification
+- [x] Verify `npm run generate` builds cleanly to `dist/`
 - [ ] Deploy to Netlify

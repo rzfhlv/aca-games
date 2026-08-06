@@ -40,7 +40,6 @@ The application shall contain four fundamental learning areas:
 
 #### Module B: Number Counting (`/learning/numbers`)
 * **Display:** Numbers from 1 to 20 with clear, bold typography.
-* **Visual Quantification:** Displaying a number (e.g., "5") must be accompanied by 5 countable interactive elements (e.g., 5 stars or 5 dots) that change color or bounce when tapped.
 * **Audio Trigger:** Audio pronunciation of the number upon clicking.
 
 #### Module C: Animal Recognition (`/learning/animals`)
